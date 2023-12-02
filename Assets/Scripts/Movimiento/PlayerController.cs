@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
 
     private void Camera_Movement()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         rotationInput = new Vector3(Input.GetAxis("Mouse X") * rotationSensibility * Time.deltaTime, Input.GetAxis("Mouse Y") * rotationSensibility * Time.deltaTime, 0f);
         
         cameraVerticalAngle = cameraVerticalAngle + rotationInput.y;
